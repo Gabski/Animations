@@ -1,31 +1,79 @@
-.animation{
+.animation {
 
-    &-001{
-	    animation: rotating 2s linear infinite;
+    &-001 {
+        animation: rotating 2s linear infinite;
     }
 
-    &-002{
-	    animation: 4s vibrate ease-in-out infinite;
+    &-002 {
+        animation: 4s vibrate ease-in-out infinite;
+    }
+
+    &-003 {
+        animation: .8s shake ease-in-out infinite;
     }
 }
 
 
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
 
 @keyframes rotating {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes vibrate {
-    0% { transform: rotate(0); }
-    4% { transform: rotate(8deg); }
-    8% { transform: rotate(-8deg); }
-    12% { transform: rotate(8deg); }
-    16% { transform: rotate(-8deg); }
-    20% { transform: rotate(0); }
-    100% { transform: rotate(0); }
-  }
+    0% {
+        transform: rotate(0);
+    }
+
+    4% {
+        transform: rotate(8deg);
+    }
+
+    8% {
+        transform: rotate(-8deg);
+    }
+
+    12% {
+        transform: rotate(8deg);
+    }
+
+    16% {
+        transform: rotate(-8deg);
+    }
+
+    20% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
