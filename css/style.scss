@@ -42,3 +42,21 @@ body{
         justify-content: center;
     }
 }
+
+
+.image-box{
+    border: 2px solid red;
+    width: 150px;
+    height: 150px;
+    display: block;
+    position: relative;
+    transition: 1.2s;
+
+    &__mask{
+        position: absolute;
+        background: red;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}

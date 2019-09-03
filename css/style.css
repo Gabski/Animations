@@ -13,6 +13,22 @@
           animation: .8s shake ease-in-out infinite;
 }
 
+.animation-004 .mask {
+  animation-direction: reverse;
+  -webkit-animation: 1.2s mask-001 ease-in-out infinite;
+          animation: 1.2s mask-001 ease-in-out infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animation-005 .mask {
+  animation-direction: reverse;
+  -webkit-animation: 1.2s mask-002 ease-in-out infinite;
+          animation: 1.2s mask-002 ease-in-out infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 @-webkit-keyframes shake {
   10%,
   90% {
@@ -145,6 +161,50 @@
   }
 }
 
+@-webkit-keyframes mask-001 {
+  0% {
+    -webkit-clip-path: circle(0% at 50% 50%);
+            clip-path: circle(0% at 50% 50%);
+  }
+  100% {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+}
+
+@keyframes mask-001 {
+  0% {
+    -webkit-clip-path: circle(0% at 50% 50%);
+            clip-path: circle(0% at 50% 50%);
+  }
+  100% {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+}
+
+@-webkit-keyframes mask-002 {
+  0% {
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes mask-002 {
+  0% {
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
 body {
   background-color: #e2e1e0;
   margin: 0 5vw;
@@ -199,5 +259,23 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.image-box {
+  border: 2px solid red;
+  width: 150px;
+  height: 150px;
+  display: block;
+  position: relative;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+}
+
+.image-box__mask {
+  position: absolute;
+  background: red;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */

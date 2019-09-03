@@ -11,6 +11,20 @@
     &-003 {
         animation: .8s shake ease-in-out infinite;
     }
+
+
+    &-004 .mask{
+        animation-direction: reverse;
+        animation: 1.2s mask-001 ease-in-out infinite;
+        animation-fill-mode: forwards;  
+    }
+ 
+    &-005 .mask{
+        animation-direction: reverse;
+        animation: 1.2s mask-002 ease-in-out infinite;
+        animation-fill-mode: forwards;  
+    }
+ 
 }
 
 
@@ -75,5 +89,26 @@
 
     100% {
         transform: rotate(0);
+    }
+}
+
+
+@keyframes mask-001 {
+    0% {
+        clip-path: circle(0% at 50% 50%);
+    }
+
+    100% {
+        clip-path: circle(100% at 50% 50%);
+    }
+}
+
+@keyframes mask-002 {
+    0% {
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }
